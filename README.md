@@ -15,3 +15,5 @@ sudo apt-get update
 sudo apt-get install -y jenkins`
 6.password is placed at `sudo cat /var/lib/jenkins/secrets/initialAdminPassword`
 7. install the Blue Ocean Plugin into Jenkins.Blue Ocean essentially provides a re-skinned interface for working with Jenkins.. manage plugins-->available-->search blue ocean and install as per blue-ocean-img
+8.create pipeline using blue ocean, it will ask for token which you can create by following the wizard on jenkins
+9.chose repository on jenking wizard to create the pipeline
