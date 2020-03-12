@@ -3,23 +3,13 @@ pipeline {
  stages {
     stage('Build') {
       steps {
-          echo 'Building..'
+          sh 'echo "hello world"''
+          sh '''
+           echo "Multiline works too"
+           ls -lah
+           '''
       }
-    }
-    stage('Test') {
-      steps {
-          echo 'Testing..'
-      }
-    }
-    stage('Deploy') {
-      steps {
-          echo 'Deploying....'
-      }
-    }
-    }
-  environment {
-    development = 'dev'
-    stage = 'stage'
-    prod = 'prod'
+    }   
   }
+ 
 }
