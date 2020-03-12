@@ -12,10 +12,11 @@ pipeline {
     }
     stage('Upload to AWS') {
         steps {
-          withAWS(region:'us-east-1',credentials:aws-static) {
+          withAWS(region:'us-east-1',credentials:'aws-static') {
             s3Upload(pathStyleAccessEnabled:true, payloadSigningEnabled: true, file:'index.html', bucket:'njha-udacity-static')
           }
         }   
   }
  
+}
 }
